@@ -25,4 +25,12 @@ class HabitTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Set the identifier for the custom cell
+    static let identifier = "HabitCell"
+
+    // Returning the xib file after instantiating it
+    static var nib: UINib {
+           return UINib(nibName: String(describing: self), bundle: nil)
+    }
+    
 }

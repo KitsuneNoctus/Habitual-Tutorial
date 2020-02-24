@@ -35,10 +35,16 @@ class HabitsTableViewController: UITableViewController {
         cell.textLabel?.text = habit.title
         return cell
     }
-
+//MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        
+        tableView.register(
+                    HabitTableViewCell.nib,
+                    forCellReuseIdentifier: HabitTableViewCell.identifier
+        )
+
 
         // Do any additional setup after loading the view.
     }
