@@ -18,6 +18,7 @@
 		3FB89CCC2403621A0034609E /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CCB2403621A0034609E /* DateExtensions.swift */; };
 		3FB89CCF240367560034609E /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CCD240367560034609E /* HabitTableViewCell.swift */; };
 		3FB89CD0240367560034609E /* HabitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB89CCE240367560034609E /* HabitTableViewCell.xib */; };
+		3FB89CD2240371A90034609E /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CD1240371A90034609E /* PersistenceLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3FB89CCB2403621A0034609E /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		3FB89CCD240367560034609E /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		3FB89CCE240367560034609E /* HabitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitTableViewCell.xib; sourceTree = "<group>"; };
+		3FB89CD1240371A90034609E /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				3FB89CCD240367560034609E /* HabitTableViewCell.swift */,
 				3FB89CCE240367560034609E /* HabitTableViewCell.xib */,
 				3FB89CC924035F210034609E /* Habit.swift */,
+				3FB89CD1240371A90034609E /* PersistenceLayer.swift */,
 				3FB89CCB2403621A0034609E /* DateExtensions.swift */,
 				3F53AF1123FF659500138E26 /* HabitsTableViewController.xib */,
 				3F53AF1723FF682D00138E26 /* UIViewControllerExtensions.swift */,
@@ -165,6 +168,7 @@
 				3F53AF1823FF682D00138E26 /* UIViewControllerExtensions.swift in Sources */,
 				3FB89CCA24035F210034609E /* Habit.swift in Sources */,
 				3F53AEFD23FF64FC00138E26 /* AppDelegate.swift in Sources */,
+				3FB89CD2240371A90034609E /* PersistenceLayer.swift in Sources */,
 				3F53AEFF23FF64FC00138E26 /* SceneDelegate.swift in Sources */,
 				3F53AF1223FF659500138E26 /* HabitsTableViewController.swift in Sources */,
 				3FB89CCF240367560034609E /* HabitTableViewCell.swift in Sources */,
