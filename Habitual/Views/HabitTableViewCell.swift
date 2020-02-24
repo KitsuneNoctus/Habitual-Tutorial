@@ -33,4 +33,16 @@ class HabitTableViewCell: UITableViewCell {
            return UINib(nibName: String(describing: self), bundle: nil)
     }
     
+    func configure(_ habit: Habit){
+        self.imageViewIcon.image = habit.selectedImage.image
+        self.labelHabitTitle.text = habit.title
+        self.labelStreaks.text = "streak: \(habit.currentStreak)"
+        
+        if habit.completedToday{
+            self.accessoryType = .checkmark
+        }else{
+            self.accessoryType = .disclosureIndicator
+        }
+    }
+    
 }

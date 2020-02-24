@@ -26,13 +26,10 @@ class HabitsTableViewController: UITableViewController {
     
     // return the UITableViewCell for the given indexPath
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: HabitTableViewCell.identifier,
-            for: indexPath
-        ) as! HabitTableViewCell
-        
-        return cell
+      let cell = tableView.dequeueReusableCell( withIdentifier: HabitTableViewCell.identifier, for: indexPath) as! HabitTableViewCell
+      let habit = habits[indexPath.row]
+      cell.configure(habit)
+      return cell
     }
     
 //MARK: View Did Load
