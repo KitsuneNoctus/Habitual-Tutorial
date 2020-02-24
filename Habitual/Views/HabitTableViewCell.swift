@@ -9,7 +9,11 @@
 import UIKit
 
 class HabitTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var imageViewIcon: UIImageView!
+    @IBOutlet weak var labelHabitTitle: UILabel!
+    @IBOutlet weak var labelStreaks: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
