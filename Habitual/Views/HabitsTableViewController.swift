@@ -9,10 +9,19 @@
 import UIKit
 
 class HabitsTableViewController: UITableViewController {
+    
+    var habits: [Habit] = [
+        Habit(title: "Go to bed before 10pm", image: Habit.Images.book),
+        Habit(title: "Drink 8 Glasses of Water", image: Habit.Images.book),
+        Habit(title: "Commit Today", image: Habit.Images.book),
+        Habit(title: "Stand up every Hour", image: Habit.Images.book)
+    ]
+    
+    
     var names: [String] = ["Alan", "Braus", "Adriana", "Mitchell", "Dani", "Jess", "Dan", "Meredith", "Dan", "Milad"]
     // return the number of rows for the given section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return habits.count
     }
     // return the UITableViewCell for the given indexPath
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -22,8 +31,8 @@ class HabitsTableViewController: UITableViewController {
         } else {
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
-        let name = names[indexPath.row]
-        cell.textLabel?.text = name
+        let habit = habits[indexPath.row]
+        cell.textLabel?.text = habit.title
         return cell
     }
 
@@ -33,6 +42,7 @@ class HabitsTableViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 }
 
 extension HabitsTableViewController{
