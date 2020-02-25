@@ -20,6 +20,8 @@
 		3F9C72532404C5B700FE2ACC /* HabitImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C72512404C5B700FE2ACC /* HabitImageCollectionViewCell.xib */; };
 		3F9C72562404E1CE00FE2ACC /* ConfirmHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C72542404E1CE00FE2ACC /* ConfirmHabitViewController.swift */; };
 		3F9C72572404E1CE00FE2ACC /* ConfirmHabitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C72552404E1CE00FE2ACC /* ConfirmHabitViewController.xib */; };
+		3F9C725A2404EDE600FE2ACC /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C72582404EDE600FE2ACC /* HabitDetailViewController.swift */; };
+		3F9C725B2404EDE600FE2ACC /* HabitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C72592404EDE600FE2ACC /* HabitDetailViewController.xib */; };
 		3FB89CCA24035F210034609E /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CC924035F210034609E /* Habit.swift */; };
 		3FB89CCC2403621A0034609E /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CCB2403621A0034609E /* DateExtensions.swift */; };
 		3FB89CCF240367560034609E /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CCD240367560034609E /* HabitTableViewCell.swift */; };
@@ -43,6 +45,8 @@
 		3F9C72512404C5B700FE2ACC /* HabitImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		3F9C72542404E1CE00FE2ACC /* ConfirmHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmHabitViewController.swift; sourceTree = "<group>"; };
 		3F9C72552404E1CE00FE2ACC /* ConfirmHabitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmHabitViewController.xib; sourceTree = "<group>"; };
+		3F9C72582404EDE600FE2ACC /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
+		3F9C72592404EDE600FE2ACC /* HabitDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitDetailViewController.xib; sourceTree = "<group>"; };
 		3FB89CC924035F210034609E /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		3FB89CCB2403621A0034609E /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		3FB89CCD240367560034609E /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				3F9C724D2404AFCB00FE2ACC /* AddHabitViewController.xib */,
 				3F9C72502404C5B700FE2ACC /* HabitImageCollectionViewCell.swift */,
 				3F9C72542404E1CE00FE2ACC /* ConfirmHabitViewController.swift */,
+				3F9C72582404EDE600FE2ACC /* HabitDetailViewController.swift */,
+				3F9C72592404EDE600FE2ACC /* HabitDetailViewController.xib */,
 				3F9C72552404E1CE00FE2ACC /* ConfirmHabitViewController.xib */,
 				3F9C72512404C5B700FE2ACC /* HabitImageCollectionViewCell.xib */,
 				3FB89CCD240367560034609E /* HabitTableViewCell.swift */,
@@ -169,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9C725B2404EDE600FE2ACC /* HabitDetailViewController.xib in Resources */,
 				3F53AF0923FF64FD00138E26 /* LaunchScreen.storyboard in Resources */,
 				3F9C724F2404AFCB00FE2ACC /* AddHabitViewController.xib in Resources */,
 				3F9C72572404E1CE00FE2ACC /* ConfirmHabitViewController.xib in Resources */,
@@ -186,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9C725A2404EDE600FE2ACC /* HabitDetailViewController.swift in Sources */,
 				3F53AF1823FF682D00138E26 /* UIViewControllerExtensions.swift in Sources */,
 				3FB89CCA24035F210034609E /* Habit.swift in Sources */,
 				3F53AEFD23FF64FC00138E26 /* AppDelegate.swift in Sources */,

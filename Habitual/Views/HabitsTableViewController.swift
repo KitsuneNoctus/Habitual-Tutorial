@@ -35,6 +35,17 @@ class HabitsTableViewController: UITableViewController {
       return cell
     }
     
+    //New stuff
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+         let selectedHabit = persistence.habits[indexPath.row]
+         let habitDetailVC = HabitDetailViewController.instantiate()
+         habitDetailVC.habit = selectedHabit
+         habitDetailVC.habitIndex = indexPath.row
+         navigationController?.pushViewController(habitDetailVC, animated: true)
+    }
+    
+    
 //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
