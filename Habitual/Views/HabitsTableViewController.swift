@@ -45,6 +45,25 @@ class HabitsTableViewController: UITableViewController {
          navigationController?.pushViewController(habitDetailVC, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      switch editingStyle {
+        case .delete:
+            let habitToDelete = persistence.habits[indexPath.row]
+            let habitIndexToDelete = indexPath.row
+            //-----------
+//            let deleteAlert = UIAlertController(habitTitle: habitToDelete.title) {
+//            self.persistence.delete(habitIndexToDelete)
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            }
+//
+//            self.present(deleteAlert, animated: true)
+
+       default:
+          break
+       }
+    }
+
+    
     
 //MARK: View Did Load
     override func viewDidLoad() {
@@ -74,6 +93,7 @@ extension HabitsTableViewController{
         title = "Habitual"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pressAddHabit(_:)))
         navigationItem.rightBarButtonItem = addButton
+        navigationItem.leftBarButtonItem = self.editButtonItem
 
     }
     
