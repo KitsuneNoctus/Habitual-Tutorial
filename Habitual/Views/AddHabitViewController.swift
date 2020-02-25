@@ -9,6 +9,22 @@
 import UIKit
 
 class AddHabitViewController: UIViewController {
+    
+    var selectedIndexPath: IndexPath?{
+        didSet{
+            var indexPaths: [IndexPath] = []
+            if let selectedIndexPath = selectedIndexPath {
+                indexPaths.append(selectedIndexPath)
+            }
+            if let oldValue = oldValue {
+                indexPaths.append(oldValue)
+            }
+            collectionView.performBatchUpdates({
+                self.collectionView.reloadItems(at: indexPaths)
+            })
+        }
+    }
+    
     let habitImages = Habit.Images.allCases
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -58,9 +74,22 @@ extension AddHabitViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitImageCollectionViewCell.identifier, for: indexPath) as! HabitImageCollectionViewCell
-        cell.setImage(image: habitImages[indexPath.row].image)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitImageCollectionViewCell.identifier, for: indexPath) as!HabitImageCollectionViewCell
+            if indexPath == selectedIndexPath{
+                cell.setImage(image: habitImages[indexPath.row].image, withSelection: true)
+            }else{
+                cell.setImage(image: habitImages[indexPath.row].image, withSelection: false)
+        }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if selectedIndexPath == indexPath {
+          selectedIndexPath = nil
+        } else {
+          selectedIndexPath = indexPath
+        }
+          return false
     }
     
     
