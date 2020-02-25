@@ -20,5 +20,19 @@ struct PersistenceLayer {
         // Step 3
         self.loadHabits()
     }
+    
+    // Step 4
+    private mutating func loadHabits(){
+        // Step 5
+        let userDefaults = UserDefaults.standard
+        // Step6
+        guard
+            let habitData = userDefaults.data(forKey: PersistenceLayer.userDefaultsHabitsKeyValue),
+            let habits = try? JSONDecoder().decode([Habit].self, from: habitData) else {
+                return
+        }
+        self.habits = habits
+        
+    }
 }
 
