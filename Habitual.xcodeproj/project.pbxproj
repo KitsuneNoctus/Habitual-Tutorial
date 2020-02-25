@@ -18,6 +18,8 @@
 		3F9C724F2404AFCB00FE2ACC /* AddHabitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C724D2404AFCB00FE2ACC /* AddHabitViewController.xib */; };
 		3F9C72522404C5B700FE2ACC /* HabitImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C72502404C5B700FE2ACC /* HabitImageCollectionViewCell.swift */; };
 		3F9C72532404C5B700FE2ACC /* HabitImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C72512404C5B700FE2ACC /* HabitImageCollectionViewCell.xib */; };
+		3F9C72562404E1CE00FE2ACC /* ConfirmHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C72542404E1CE00FE2ACC /* ConfirmHabitViewController.swift */; };
+		3F9C72572404E1CE00FE2ACC /* ConfirmHabitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C72552404E1CE00FE2ACC /* ConfirmHabitViewController.xib */; };
 		3FB89CCA24035F210034609E /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CC924035F210034609E /* Habit.swift */; };
 		3FB89CCC2403621A0034609E /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CCB2403621A0034609E /* DateExtensions.swift */; };
 		3FB89CCF240367560034609E /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB89CCD240367560034609E /* HabitTableViewCell.swift */; };
@@ -39,6 +41,8 @@
 		3F9C724D2404AFCB00FE2ACC /* AddHabitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddHabitViewController.xib; sourceTree = "<group>"; };
 		3F9C72502404C5B700FE2ACC /* HabitImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F9C72512404C5B700FE2ACC /* HabitImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		3F9C72542404E1CE00FE2ACC /* ConfirmHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmHabitViewController.swift; sourceTree = "<group>"; };
+		3F9C72552404E1CE00FE2ACC /* ConfirmHabitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmHabitViewController.xib; sourceTree = "<group>"; };
 		3FB89CC924035F210034609E /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		3FB89CCB2403621A0034609E /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		3FB89CCD240367560034609E /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				3F9C724C2404AFCB00FE2ACC /* AddHabitViewController.swift */,
 				3F9C724D2404AFCB00FE2ACC /* AddHabitViewController.xib */,
 				3F9C72502404C5B700FE2ACC /* HabitImageCollectionViewCell.swift */,
+				3F9C72542404E1CE00FE2ACC /* ConfirmHabitViewController.swift */,
+				3F9C72552404E1CE00FE2ACC /* ConfirmHabitViewController.xib */,
 				3F9C72512404C5B700FE2ACC /* HabitImageCollectionViewCell.xib */,
 				3FB89CCD240367560034609E /* HabitTableViewCell.swift */,
 				3FB89CCE240367560034609E /* HabitTableViewCell.xib */,
@@ -165,6 +171,7 @@
 			files = (
 				3F53AF0923FF64FD00138E26 /* LaunchScreen.storyboard in Resources */,
 				3F9C724F2404AFCB00FE2ACC /* AddHabitViewController.xib in Resources */,
+				3F9C72572404E1CE00FE2ACC /* ConfirmHabitViewController.xib in Resources */,
 				3F53AF1323FF659500138E26 /* HabitsTableViewController.xib in Resources */,
 				3FB89CD0240367560034609E /* HabitTableViewCell.xib in Resources */,
 				3F9C72532404C5B700FE2ACC /* HabitImageCollectionViewCell.xib in Resources */,
@@ -188,6 +195,7 @@
 				3FB89CCF240367560034609E /* HabitTableViewCell.swift in Sources */,
 				3F9C72522404C5B700FE2ACC /* HabitImageCollectionViewCell.swift in Sources */,
 				3F9C724E2404AFCB00FE2ACC /* AddHabitViewController.swift in Sources */,
+				3F9C72562404E1CE00FE2ACC /* ConfirmHabitViewController.swift in Sources */,
 				3FB89CCC2403621A0034609E /* DateExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
