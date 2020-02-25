@@ -34,5 +34,18 @@ struct PersistenceLayer {
         self.habits = habits
         
     }
+    
+     // Step 7
+    @discardableResult
+
+       // Step 8
+       mutating func createNewHabit(name: String, image: Habit.Images) -> Habit {
+
+           let newHabit = Habit(title: name, image: image)
+           self.habits.insert(newHabit, at: 0) // Prepend the habits to the array
+           self.saveHabits()
+
+           return newHabit
+       }
 }
 
