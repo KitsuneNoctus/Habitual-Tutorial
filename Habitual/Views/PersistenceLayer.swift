@@ -61,12 +61,46 @@ struct PersistenceLayer {
     }
     
     // Step 11
-    mutating func delete(_ habitIndex: Int){
-        // remove the habit at the given index
+    mutating func delete(_ habitIndex: Int) {
+        // Remove habit at the given index
         self.habits.remove(at: habitIndex)
-        
+
         // Persist the changes we made to our habits array
         self.saveHabits()
+    }
+    
+    mutating func markHabitAsCompleted(_ habitIndex: Int) -> Habit {
+
+       // Step 12
+        var updatedHabit = self.habits[habitIndex]
+
+       // Step 13
+        guard updatedHabit.completedToday == false else { return updatedHabit }
+
+        updatedHabit.numberOfCompletions += 1
+
+        // Step 14
+        if let lastCompletionDate = updatedHabit.lastCompletionDate, lastCompletionDate.isYesterday {
+            updatedHabit.currentStreak += 1
+        } else {
+            updatedHabit.currentStreak = 1
+        }
+
+        // Step 15
+        if updatedHabit.currentStreak > updatedHabit.bestStreak {
+            updatedHabit.bestStreak = updatedHabit.currentStreak
+        }
+
+        // Step 16
+        let now = Date()
+        updatedHabit.lastCompletionDate = now
+
+        // Step 17
+        self.habits[habitIndex] = updatedHabit
+
+        // Step 18
+        self.saveHabits()
+        return updatedHabit
     }
 }
 
