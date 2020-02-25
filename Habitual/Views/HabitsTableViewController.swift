@@ -9,6 +9,7 @@
 import UIKit
 
 class HabitsTableViewController: UITableViewController {
+    private var persistence = PersistenceLayer()
     
     var habits: [Habit] = [
         Habit(title: "Go to bed before 10pm", image: Habit.Images.book),
@@ -19,15 +20,17 @@ class HabitsTableViewController: UITableViewController {
     
     
     var names: [String] = ["Alan", "Braus", "Adriana", "Mitchell", "Dani", "Jess", "Dan", "Meredith", "Dan", "Milad"]
+    
+//MARK: Cell configuration==========
     // return the number of rows for the given section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return habits.count
+        return persistence.habits.count
     }
     
     // return the UITableViewCell for the given indexPath
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell( withIdentifier: HabitTableViewCell.identifier, for: indexPath) as! HabitTableViewCell
-      let habit = habits[indexPath.row]
+       let habit = persistence.habits[indexPath.row]
       cell.configure(habit)
       return cell
     }
@@ -41,13 +44,20 @@ class HabitsTableViewController: UITableViewController {
                     HabitTableViewCell.nib,
                     forCellReuseIdentifier: HabitTableViewCell.identifier
         )
-
-
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+
+           persistence.setNeedsToReloadHabits()
+           tableView.reloadData()
+    }
+
+    
 }
 
+//MARK: Habit Table View Controller extension
 extension HabitsTableViewController{
     func setupNavBar(){
         title = "Habitual"
