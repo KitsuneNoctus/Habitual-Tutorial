@@ -47,5 +47,17 @@ struct PersistenceLayer {
 
            return newHabit
        }
+    
+    private func saveHabits(){
+        //step 9
+        guard let habitsData = try? JSONEncoder().encode(self.habits)else{
+            fatalError("could not encode lits of habits")
+        }
+        
+        //Step 10
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(habitsData, forKey: PersistenceLayer.userDefaultsHabitsKeyValue)
+        userDefaults.synchronize()
+    }
 }
 
